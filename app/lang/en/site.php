@@ -15,5 +15,10 @@ return array(
 
 	'contact_us' => 'Contact Us',
         'sign_up' => 'Sign Up',
+        'choose_language' => 'Choose language',
+        'dutch' => 'Dutch',
+        'english' => 'English',
+        'dari' => 'Dari',
+        'pashto' => 'Pashto',
 
 );

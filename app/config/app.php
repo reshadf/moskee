@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://localhost/~reshadfarid/moskee',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return array(
 	|
 	*/
 
-	'locale' => 'en',
+	'locale' => 'nl',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => '2hi9m89D2xOR8atYdEA0269jWtM20Oad',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -204,6 +204,6 @@ return array(
 
     ),
 
-    'available_language' => array('en', 'pt', 'es'),
+    'available_language' => array('en', 'nl', 'af', 'pa'),
 
 );

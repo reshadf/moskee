@@ -37,8 +37,14 @@ class BlogController extends BaseController {
 		// Get all the blog posts
 		$posts = $this->post->orderBy('created_at', 'DESC')->paginate(10);
 
+        $json_string = json_decode(file_get_contents('http://praytime.info/getprayertimes.php?lat=52.366699&lon=4.650000&gmt=60&m=2&y=2014&school=0', true));
+
+        $officialDate = Carbon::now('Europe/Amsterdam');
+
 		// Show the page
-		return View::make('site/blog/index', compact('posts'));
+		return View::make('index', compact('posts'))
+            ->with('timetable', $json_string)
+            ->with('datum', $officialDate);
 	}
 
 	/**

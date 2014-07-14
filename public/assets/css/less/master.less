@@ -76,30 +76,39 @@
  *
  */
 
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
 /* Wrapper for page content to push down footer */
 #wrap {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    /* Negative indent footer by it's height */
-    margin: 0 auto -60px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -120px;
 }
 
 /* Set the fixed height of the footer here */
 #push,
 #footer {
-    height: 60px;
+  height: 120px;
 }
 #footer {
-    background-color: #f5f5f5;
+  color: #a6a97d;
 }
 
+#footer h4 {
+  color: #C4500F;
+}
 
 #wrap > .container {
-    padding-top: 60px;
+    padding-top: 120px;
 }
 .container .credit {
     margin: 20px 0;
+    color: #fff;
 }
 
 /*!
@@ -108,8 +117,8 @@
  */
 
 .btn-cancel {
-	.btn;
-	.btn-warning;
+    .btn;
+    .btn-warning;
 }
 
 .table {
@@ -118,4 +127,348 @@
 
 .pagination {
     margin: 0;
+}
+
+
+
+
+
+/* backtotop */
+.back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #ffffff;
+    background: #ff9e17; 
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+}
+
+.back-to-top:hover {    
+    color: #ffffff;
+    background: #ff9e17; 
+}
+
+/*
+ bootstrap overrides
+
+----------------------------------------------------------
+----------------------------------------------------------
+*/
+
+p, h4, h4 strong a {
+    color: #a6a97d;
+}
+
+p, h4 strong a:hover {
+    color: #9ca96c;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #C4500F;
+}
+
+.innerpage {
+  margin-bottom: 60px;
+  margin-top: -130px;
+}
+
+
+
+/*
+ logo
+
+----------------------------------------------------------
+----------------------------------------------------------
+*/
+
+#logo {
+  width: 100%;
+  height: 340px;
+  position: relative;
+  float: left;
+  margin-left: 10px;
+  background-size: 386px 337px;
+}
+
+
+/*
+ Navigation bar
+
+----------------------------------------------------------
+----------------------------------------------------------
+*/
+
+.heading {
+  height: 300px;
+  background:#FFFFFF;
+  width: 100%;
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background: #fafafa;
+  bottom: 0;
+  float: right;
+  padding: 0px;
+}
+
+.navbar a{
+  color: #515151;
+}
+
+.navbar-inner {
+  min-height: 45px;
+  padding-right: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -khtml-border-radius: 5px 5px 0px 0px;
+  border:none;
+}
+nav.navbar {
+  margin-bottom:0;
+}
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle,
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+  background-color: #C4500F;
+  color: white;
+  text-shadow: 0 1px 0 #000;
+}
+
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:active,
+.navbar .btn-navbar.active,
+.navbar .btn-navbar.disabled,
+.navbar .btn-navbar[disabled] {
+  background-color: #C4500F;
+}
+
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus,
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+}
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  font-weight:bold;
+}
+
+.navbar .nav > li > a {
+  padding: 5px 10px 5px;
+  margin: 5px 5px 5px 0;
+  color:#353535;
+}
+.navbar .nav > li > a:hover {
+  color:#000;
+}
+
+.navbar-form .btn-peach {
+  padding-bottom:3px;
+  font-weight:bold;
+}
+
+.navbar .btn-navbar  {
+  margin-bottom:10px;
+  color: white;
+  text-shadow: 0 1px 1px rgba(82, 36, 0, 0.75);
+  background-color: #C4500F;
+  background-image: -moz-linear-gradient(top, #F76300, #C4500F);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#C4500F));
+  background-image: -webkit-linear-gradient(top, #F76300, #C4500F);
+  background-image: -o-linear-gradient(top, #F76300, #C4500F);
+  background-image: linear-gradient(to bottom, #F76300, #C4500F);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F76300', endColorstr='#C4500F', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  /* For Internet Explorer 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F76300, endColorstr=#C4500F)";
+  border: 1px solid #D16847;
+  border-bottom-color: #AC4727;
+
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.nav-collapse .navbar-form, .nav-collapse .navbar-search {
+  padding: 0 5px 5px 0;
+  height:auto; /*experimental*/
+}
+
+.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
+  padding: 5px 12px;
+}
+
+.dropdown-menu a {
+  font-weight:normal;
+  text-transform:none;
+  font-size:13px;
+}
+.dropdown-menu li > a {
+  display: block;
+  padding: 3px 15px;
+  clear: both;
+  font-weight: normal;
+  line-height: 18px;
+  color: #333;
+  white-space: nowrap;
+}
+
+h1 > .btn-group {
+  margin-top:5px;
+}
+.btn-group > .btn + .dropdown-toggle {
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+/*dropdown menu override
+.navbar .nav > .active > a,*/
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover {
+
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0081c2;
+  background-image: -moz-linear-gradient(top, #F76300, #C4500F);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#F76300), to(#C4500F));
+  background-image: -webkit-linear-gradient(top, #F76300, #C4500F);
+  background-image: -o-linear-gradient(top, #F76300, #C4500F);
+  background-image: linear-gradient(to bottom, #F76300, #C4500F);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F76300', endColorstr='#C4500F', GradientType=0);
+
+  text-shadow: none;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  border-top-color: #FFF;
+  border-bottom-color: #FFF;
+}
+
+.nav .dropdown-toggle .caret, .nav-tabs .active .dropdown-toggle .caret  {
+  border-top-color: #CC6200;
+  border-bottom-color: #CC6200;
+}
+
+.nav .dropdown-toggle:hover .caret {
+  border-top-color: #9B4A00;
+  border-bottom-color: #9B4A00;
+}
+
+.nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > li.dropdown.open.active > a:hover {
+  color: white;
+  background-color: #DD6303;
+  border-color: #999;
+}
+
+.icon-bar {
+  background-color: #C4500F;
+}
+
+
+/*
+ sidebar
+
+----------------------------------------------------------
+----------------------------------------------------------
+*/
+.aside {
+  margin-top: 20px;
+}
+
+
+/*
+ Prayer times
+
+----------------------------------------------------------
+----------------------------------------------------------
+*/
+
+.gebedstijden {
+
+}
+
+.gebedstijden .time {
+  color: #C4500F;
+}
+
+.aside .list-group-item:hover{
+  background: #C4500F;
+  color: #FFFFFF;
+  border: #C4500F;
+}
+
+
+/*
+ Quotes
+
+----------------------------------------------------------
+----------------------------------------------------------
+*/
+#quotes
+{
+    width: 100%;
+    height: 191px;
+    right: 0;
+    top: -20;
+    float: left;
+    position: relative;
+    z-index: 999;
+}
+
+#quotes h2 {
+    text-align: center;
+    color: #fff;
+}
+
+#quotes ul li
+{
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 18px;
+}
+
+#quotes ul li p
+{
+    color: #515151;
+    font-size: 2em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 8px;
+}
+
+#quotes ul li .person
+{
+    color: #515151;
+    display: inline;
+
+}
+
+#quote li
+{
+    display: none;
 }
