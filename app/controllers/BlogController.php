@@ -35,7 +35,7 @@ class BlogController extends BaseController {
 	public function getIndex()
 	{
 		// Get all the blog posts
-		$posts = $this->post->orderBy('created_at', 'DESC')->paginate(10);
+		$posts = $this->post->where('locale', '=', Session::get('lang'))->orderBy('created_at', 'DESC')->paginate(10);
 
         $json_string = json_decode(file_get_contents('http://praytime.info/getprayertimes.php?lat=52.366699&lon=4.650000&gmt=60&m=2&y=2014&school=0', true));
 

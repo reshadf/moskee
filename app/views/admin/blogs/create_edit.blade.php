@@ -38,6 +38,22 @@
 					</div>
 				</div>
 				<!-- ./ content -->
+
+                <!-- locale -->
+                <div class="form-group {{{ $errors->has('locale') ? 'error' : '' }}}">
+                    <div class="col-md-12">
+                        <label class="control-label" for="locale">Taal</label>
+                        <select name="locale">
+                            <option value="{{{ Input::old('locale', isset($post) ? $post->locale : null) }}}">{{{ Input::old('locale', isset($post) ? $post->locale : null) }}}</option>
+                            <option value="nl">nl</option>
+                            <option value="da">da</option>
+                            <option value="pa">pa</option>
+                            <option value="en">en</option>
+                        </select>
+                        {{{ $errors->first('locale', '<span class="help-inline">:message</span>') }}}
+                    </div>
+                </div>
+                <!-- ./ locale -->
 			</div>
 			<!-- ./ general tab -->
 

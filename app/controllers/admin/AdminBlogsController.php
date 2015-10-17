@@ -76,6 +76,7 @@ class AdminBlogsController extends AdminController {
             $this->post->title            = Input::get('title');
             $this->post->slug             = Str::slug(Input::get('title'));
             $this->post->content          = Input::get('content');
+            $this->post->locale           = Input::get('locale');
             $this->post->meta_title       = Input::get('meta-title');
             $this->post->meta_description = Input::get('meta-description');
             $this->post->meta_keywords    = Input::get('meta-keywords');
@@ -147,6 +148,7 @@ class AdminBlogsController extends AdminController {
             $post->title            = Input::get('title');
             $post->slug             = Str::slug(Input::get('title'));
             $post->content          = Input::get('content');
+            $this->locale           = Input::get('locale');
             $post->meta_title       = Input::get('meta-title');
             $post->meta_description = Input::get('meta-description');
             $post->meta_keywords    = Input::get('meta-keywords');
@@ -223,7 +225,7 @@ class AdminBlogsController extends AdminController {
      */
     public function getData()
     {
-        $posts = Post::select(array('posts.id', 'posts.title', 'posts.id as comments', 'posts.created_at'));
+        $posts = Post::select(array('posts.locale', 'posts.id', 'posts.title' , 'posts.id as comments', 'posts.created_at'));
 
         return Datatables::of($posts)
 
@@ -232,7 +234,6 @@ class AdminBlogsController extends AdminController {
         ->add_column('actions', '<a href="{{{ URL::to(\'admin/blogs/\' . $id . \'/edit\' ) }}}" class="btn btn-default btn-xs iframe" >{{{ Lang::get(\'button.edit\') }}}</a>
                 <a href="{{{ URL::to(\'admin/blogs/\' . $id . \'/delete\' ) }}}" class="btn btn-xs btn-danger iframe">{{{ Lang::get(\'button.delete\') }}}</a>
             ')
-
         ->remove_column('id')
 
         ->make();

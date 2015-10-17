@@ -76,6 +76,11 @@ class Post extends Eloquent implements PresentableInterface {
 		return Url::to($this->slug);
 	}
 
+    public function locale()
+    {
+        return $this->locale;
+    }
+
 	/**
 	 * Returns the date of the blog post creation,
 	 * on a good and more readable format :)

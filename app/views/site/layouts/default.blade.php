@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 	<head>
 		<!-- Basic Page Needs
 		================================================== -->
@@ -97,7 +97,7 @@
 				        <ul class="dropdown-menu">
 				          <li>{{link_to_route('language.select', Lang::get('site.english'), array('en'))}}</li>
     					  <li>{{link_to_route('language.select', Lang::get('site.dutch'), array('nl'))}}</li>
-    					  <li>{{link_to_route('language.select', Lang::get('site.dari'), array('af'))}}</li>
+    					  <li>{{link_to_route('language.select', Lang::get('site.dari'), array('da'))}}</li>
     					  <li>{{link_to_route('language.select', Lang::get('site.pashto'), array('pa'))}}</li>
 				        </ul>
 				        </li>
